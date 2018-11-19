@@ -28,14 +28,19 @@ class AudioDB
     }
 
 
-    public function addAudio($first_name, $last_name, $email, $filename) {
+    public function addAudio($parent_first_name, $parent_last_name, $parent_nationality, $email, $telephone, $dulwich_pudong, $number_childreen, $filename) {
 
-        $sql = "INSERT INTO audio(first_name, last_name, email, filename) VALUES(:first_name, :last_name, :email, :filename)";
+        $sql = "INSERT INTO audio(parent_first_name, parent_last_name, parent_nationality, email, telephone, dulwich_pudong, number_childreen, filename) 
+                      VALUES(:parent_first_name, :parent_last_name, :parent_nationality, :email, :telephone, :dulwich_pudong, :number_childreen, :filename)";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->bindParam(':filename', $filename);
-        $stmt->bindParam(':first_name', $first_name);
-        $stmt->bindParam(':last_name', $last_name);
+        $stmt->bindParam(':parent_first_name', $parent_first_name);
+        $stmt->bindParam(':parent_last_name', $parent_last_name);
+        $stmt->bindParam(':parent_nationality', $parent_nationality);
         $stmt->bindParam(':email', $email);
+        $stmt->bindParam(':telephone', $telephone);
+        $stmt->bindParam(':dulwich_pudong', $dulwich_pudong);
+        $stmt->bindParam(':number_childreen', $number_childreen);
+        $stmt->bindParam(':filename', $filename);
         return $stmt->execute();
     }
 

@@ -1,0 +1,157 @@
+@import url("//hello.myfonts.net/count/31909d"); /* For Ticket # 8450617, more code below */
+
+/*
+*	Ticket 3870-8424504: 
+*	Author: Daniel G Bremehr
+*      iFrame sizing on email archive page
+*/
+
+.page_30626 iframe {
+    height: inherit!important;
+}
+
+/* End Section */
+
+
+/**
+ *
+ * Author: Joel C.
+ * Allow checkboxes to display
+ *
+ */
+
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+/* End Section */
+
+/**
+*
+*   Date: 09/21/2016
+*   Ticket 3870-8463400
+*   Author: Kosha Burnett
+*   Description: radio buttons appearing as unselectable dots
+*/
+
+input[type="radio"] {
+	-webkit-appearance: radio;
+	-moz-appearance: radio;
+	appearance: radio;
+}
+
+/* End Section */
+
+/*
+ * Ticket # 8450617
+ * Author: Sean Loveall
+ * Desc: Adding fonts as requested by client
+ */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3248285, 2016-07-10T23:45:10-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: AvenirLTStd-Book by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book/
+ * Copyright: Copyright © 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. © 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * 
+ * Webfont: AvenirLTStd-Black by Linotype
+ * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black/
+ * Copyright: Copyright © 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. © 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
+ * 
+ * Webfont: BaskervilleMTStd-Regular by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/baskerville-mt/std-roman/
+ * Copyright: Font software Copyright 1994 Adobe Systems Incorporated. Typeface designs Copyright 1994 The Monotype Corporation. All rights reserved.
+ * 
+ * Webfont: BaskervilleMTStd-Italic by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/baskerville-mt/std-italic/
+ * Copyright: Font software Copyright 1994 Adobe Systems Incorporated. Typeface designs Copyright 1994 The Monotype Corporation. All rights reserved.
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3248285
+ * Licensed pageviews: 250,000
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+@font-face {font-family: 'AvenirLTStd-Book';src: url('/uploaded/fonts/31909D_0_0.eot');src: url('/uploaded/fonts/31909D_0_0.eot?#iefix') format('embedded-opentype'),url('/uploaded/fonts/31909D_0_0.woff2') format('woff2'),url('/uploaded/fonts/31909D_0_0.woff') format('woff'),url('/uploaded/fonts/31909D_0_0.ttf') format('truetype');}
+@font-face {font-family: 'AvenirLTStd-Black';src: url('/uploaded/fonts/31909D_1_0.eot');src: url('/uploaded/fonts/31909D_1_0.eot?#iefix') format('embedded-opentype'),url('/uploaded/fonts/31909D_1_0.woff2') format('woff2'),url('/uploaded/fonts/31909D_1_0.woff') format('woff'),url('/uploaded/fonts/31909D_1_0.ttf') format('truetype');}
+@font-face {font-family: 'BaskervilleMTStd-Regular';src: url('/uploaded/fonts/31909D_2_0.eot');src: url('/uploaded/fonts/31909D_2_0.eot?#iefix') format('embedded-opentype'),url('/uploaded/fonts/31909D_2_0.woff2') format('woff2'),url('/uploaded/fonts/31909D_2_0.woff') format('woff'),url('/uploaded/fonts/31909D_2_0.ttf') format('truetype');}
+@font-face {font-family: 'BaskervilleMTStd-Italic';src: url('/uploaded/fonts/31909D_3_0.eot');src: url('/uploaded/fonts/31909D_3_0.eot?#iefix') format('embedded-opentype'),url('/uploaded/fonts/31909D_3_0.woff2') format('woff2'),url('/uploaded/fonts/31909D_3_0.woff') format('woff'),url('/uploaded/fonts/31909D_3_0.ttf') format('truetype');}
+ 
+html {
+	font-family: "AvenirLTStd-Book", sans-serif;
+}
+h1, h2, .bannermodtitle,
+.module .bannermodtitle,
+div[aria-labelledby*='ui-dialog-title-pagePopModal'] .ui-dialog-title,
+.pagetype_item b, h3, h4,
+.monthhead, .directory .fsDirEntryName strong,
+.imageGalleryViewContainer .imageGalleryViewObject .imageGalleryViewTitle,
+.gridTable .contentElementTitle,
+.popup-window #ptitle, h5,
+h6 #calendar_nav + .listonly_block .listcap,
+#calendar_nav + .listonly_block h6 .listcap,
+h6 .directory .fsDirEntryRoles:before,
+.directory h6 .fsDirEntryRoles:before,
+h6 .directory .fsDirEntryTitle:before,
+.directory h6 .fsDirEntryTitle:before {
+	font-family: "AvenirLTStd-Book", sans-serif;
+}
+h6, #calendar_nav + .listonly_block .listcap, .directory .fsDirEntryRoles:before, .directory .fsDirEntryTitle:before {
+	font-family: "AvenirLTStd-Book", sans-serif;
+}
+.ui-widget {
+	font-family: "AvenirLTStd-Book", sans-serif;
+}
+.fs_style_27 {
+	font: 700 18px "AvenirLTStd-Book", sans-serif;
+}
+#leftbanner .bannermodtitle, #rightbanner .bannermodtitle {
+	font: 700 16px "AvenirLTStd-Black", sans-serif;
+	font-weight: normal;
+}
+.fsMenu a {
+	font: 600 14px "AvenirLTStd-Book", sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "AvenirLTStd-Black", sans-serif;
+	font-weight: normal;
+}
+
+/* End Section */
+
+
+/*
+*  Ticket 8695041
+*  Virtual Tour iframes need full height.
+*  08/15/17 - James B
+*/
+
+iframe[src*="youvisit.com"] {
+    height: 100%;
+}
+
+/* End Section */
+
+
+/*
+*  Ticket 8696390
+*  Expanding lists were acquiring height via JS. This causes extra spacing or not enough spacing, depending on how much content there is. Setting auto height.
+*  08/24//17 - James B
+*/
+
+.mcExpandingList .ui-accordion-content {
+    height: auto !important;
+}
+
+/* End Section */
