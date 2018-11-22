@@ -142,19 +142,12 @@ function createDownloadLink(blob) {
 		xhr.onload=function(e) {
 		  if(this.readyState === 4) {
 			  console.log("Server returned: ",e.target.responseText);
-			  $('#success').html(e.target.responseText);
+			  // $('#success').html(e.target.responseText);
+			  alert(e.target.responseText);
 		  }
 		};
 		var fd=new FormData();
 		fd.append("audio_data",blob, filename);
-		fd.append("parent_first_name",document.getElementById("parent_first_name").value);
-		fd.append("parent_last_name",document.getElementById("parent_last_name").value);
-		fd.append("parent_nationality",document.getElementById("parent_nationality").value);
-		fd.append("email",document.getElementById("email").value);
-		fd.append("telephone",document.getElementById("telephone").value);
-		fd.append("dulwich_pudong",document.getElementById("dulwich_pudong").value);
-		// fd.append("planned_start_date",document.getElementById("planned_start_date").value);
-		fd.append("number_childreen",document.getElementById("number_childreen").value);
 		xhr.open("POST","upload.php",true);
 		xhr.send(fd);
 	})

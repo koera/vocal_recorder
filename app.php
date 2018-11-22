@@ -392,12 +392,13 @@
 
                 <div style="margin-top: 0;">
 
-
-                    <a name="formAnchor_669"></a>
-
-
                     <div class="subGroup">
 
+                        <?php
+                        if(isset($_GET['message'])){
+                            echo "<h2 style='color: green;'>Data saved</h2>";
+                        }
+                        ?>
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
@@ -414,7 +415,7 @@
                             <div class="tab-pane active container" id="forms">
                                 <div class="row">
                                     <form name="form_669" id="form_669"
-                                          method="post" class="cf_form disableEnter" enctype="multipart/form-data">
+                                          method="post" action="form.php" class="cf_form disableEnter" enctype="multipart/form-data">
 
                                         <div class="mainGroupSub targetForm" style="width: 450px;">
                                             <div class="formPage showFormPage" id="formPage_669_1">
@@ -435,14 +436,13 @@
                                                                 Name* </label>
                                                             <div class="elementBody"><input type="text"
                                                                                             id="parent_first_name"
-                                                                                            name="el_57725"
+                                                                                            name="parent_first_name"
                                                                                             data-elbindid="57725"
                                                                                             data-prefill="NO"
                                                                                             data-prefilldatafield="NO"
-                                                                                            id="el_57725"
                                                                                             value="" size="20"
                                                                                             maxlength="255"
-                                                                                            class="fsValidate[required]">
+                                                                                            class="fsValidate[required]" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -453,12 +453,12 @@
                                                                 Name* </label>
                                                             <div class="elementBody"><input type="text"
                                                                                             id="parent_last_name"
-                                                                                            name="el_57726"
+                                                                                            name="parent_last_name"
                                                                                             data-elbindid="57726"
                                                                                             data-prefill="NO"
                                                                                             value="" size="20"
                                                                                             maxlength="255"
-                                                                                            class="fsValidate[required]">
+                                                                                            class="fsValidate[required]" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -470,12 +470,12 @@
                                                             Nationality* </label>
                                                         <div class="elementBody"><input type="text"
                                                                                         id="parent_nationality"
-                                                                                        name="el_57727"
+                                                                                        name="parent_nationality"
                                                                                         data-elbindid="57727"
                                                                                         data-prefill="NO"
                                                                                         value="" size="20"
                                                                                         maxlength="255"
-                                                                                        class="fsValidate[required]">
+                                                                                        class="fsValidate[required]" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -484,14 +484,14 @@
                                                         <div class="elementContainer field_57728 "
                                                              id="elementContainer_57728">
                                                             <label for="el_57728" class="required">Email* </label>
-                                                            <div class="elementBody"><input type="text" name="el_57728"
+                                                            <div class="elementBody"><input type="email" name="email"
                                                                                             id="email"
                                                                                             data-elbindid="57728"
                                                                                             data-prefill="NO"
                                                                                             data-prefilldatafield="NO"
                                                                                             value="" size="20"
                                                                                             maxlength="255"
-                                                                                            class="fsValidate[required,email]">
+                                                                                            class="fsValidate[required,email]" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -500,14 +500,14 @@
                                                              id="elementContainer_57729">
                                                             <label for="el_57729"
                                                                    class="required">Telephone/Mobile* </label>
-                                                            <div class="elementBody"><input type="text" name="el_57729"
+                                                            <div class="elementBody"><input type="text" name="telephone"
                                                                                             id="telephone"
                                                                                             data-elbindid="57729"
                                                                                             data-prefill="NO"
                                                                                             data-prefilldatafield="NO"
                                                                                             value="" size="20"
                                                                                             maxlength="255"
-                                                                                            class="fsValidate[required]">
+                                                                                            class="fsValidate[required]" required>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -517,7 +517,7 @@
                                                          id="elementContainer_57730"><label for="el_57730"
                                                                                             class="required">How did
                                                             you first hear about Dulwich Pudong?* </label>
-                                                        <div class="elementBody"><select name="el_57730"
+                                                        <div class="elementBody"><select name="dulwich_pudong"
                                                                                          id="dulwich_pudong"
                                                                                          class="fsValidate[required] hasTestConditionChangeEvent"
                                                                                          data-elbindid="57730"
@@ -549,7 +549,7 @@
                                                                                             class="required">Please
                                                             let us know how many children will apply to our
                                                             school?* </label>
-                                                        <div class="elementBody"><select name="el_57733"
+                                                        <div class="elementBody"><select name="number_childreen"
                                                                                          id="number_childreen"
                                                                                          class="fsValidate[required] hasTestConditionChangeEvent"
                                                                                          data-elbindid="57733"
@@ -571,6 +571,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <br/>
+
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </div>
 
                                     </form>

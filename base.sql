@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Lun 19 Novembre 2018 à 09:40
+-- Généré le :  Jeu 22 Novembre 2018 à 09:50
 -- Version du serveur :  5.7.24-0ubuntu0.16.04.1-log
 -- Version de PHP :  7.0.32-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -28,14 +28,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `audio` (
   `id` int(11) NOT NULL,
+  `filename` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `form`
+--
+
+CREATE TABLE `form` (
+  `id` int(11) NOT NULL,
   `parent_first_name` varchar(25) NOT NULL,
   `parent_last_name` varchar(25) NOT NULL,
   `parent_nationality` varchar(25) NOT NULL,
   `email` varchar(35) NOT NULL,
   `telephone` varchar(15) NOT NULL,
   `dulwich_pudong` varchar(30) NOT NULL,
-  `number_childreen` varchar(3) NOT NULL,
-  `filename` varchar(255) NOT NULL
+  `number_childreen` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -49,6 +59,12 @@ ALTER TABLE `audio`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `form`
+--
+ALTER TABLE `form`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT pour les tables exportées
 --
 
@@ -56,7 +72,12 @@ ALTER TABLE `audio`
 -- AUTO_INCREMENT pour la table `audio`
 --
 ALTER TABLE `audio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT pour la table `form`
+--
+ALTER TABLE `form`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
